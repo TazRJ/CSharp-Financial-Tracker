@@ -2,6 +2,13 @@
 
 ## Server/Database/Connection String:
 
+**1. Install Sql Server Express**
+**2. Open SQL Server Management Studio and connect default sql server**
+<img width="957" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/27c27eea-7a68-48c5-a5b7-da7ebe1ca9a5">
+
+**Connect to the server from VSStudio: Open Server Explorer, and click on add data connection. Select Microsoft SQL Server**
+<img width="957" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/5801ce2a-6335-4d2c-bb6a-750dd2277045">
+
 Modify connection strings on all pages to your personal connection string for your server! It should be displayed on the properties tab when you click on your server in the server explorer:
 
 <img width="166" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/1bdfe497-d464-4569-a60d-e14c2b851ad5">
@@ -11,7 +18,7 @@ Modify connection strings on all pages to your personal connection string for yo
 
 ## Table
 
-**Here is the code for the Expense, Income and User tables:**
+**Here is the code for each table Expense, Income and User tables! Add these to the Tables folder in your database!**
 
 ~~~
  CREATE TABLE [dbo].[ExpenseTbl] (
