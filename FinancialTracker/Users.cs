@@ -20,10 +20,10 @@ namespace FinancialTracker
 
         private void label2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=TarunLaptop\SQLEXPRESS;Initial Catalog=FinanceDbv2;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Server=tcp:sqldatabasefinance.database.windows.net,1433;Initial Catalog=FinanceDB;Persist Security Info=False;User ID=test;Password=!abcd123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         private void Clear()
         {
             UnameTb.Text = "";
@@ -64,6 +64,11 @@ namespace FinancialTracker
         private void UnameTb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

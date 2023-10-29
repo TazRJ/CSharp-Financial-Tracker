@@ -260,6 +260,7 @@
             label41.Size = new Size(108, 38);
             label41.TabIndex = 3;
             label41.Text = "Income";
+            label41.Click += label41_Click;
             // 
             // label42
             // 
@@ -343,6 +344,7 @@
             IncDescTb.Name = "IncDescTb";
             IncDescTb.Size = new Size(243, 164);
             IncDescTb.TabIndex = 31;
+            IncDescTb.TextChanged += IncDescTb_TextChanged;
             // 
             // CatCb
             // 

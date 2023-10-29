@@ -43,7 +43,7 @@ namespace FinancialTracker
             Con.Close();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=TarunLaptop\SQLEXPRESS;Initial Catalog=FinanceDbv2;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Server=tcp:sqldatabasefinance.database.windows.net,1433;Initial Catalog=FinanceDB;Persist Security Info=False;User ID=test;Password=!abcd123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -83,6 +83,11 @@ namespace FinancialTracker
             Login Obj = new Login();
             Obj.Show();
             this.Hide();
+        }
+
+        private void IncomeDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

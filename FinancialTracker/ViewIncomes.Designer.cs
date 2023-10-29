@@ -170,6 +170,7 @@
             IncomeDGV.RowTemplate.Height = 25;
             IncomeDGV.Size = new Size(1741, 768);
             IncomeDGV.TabIndex = 47;
+            IncomeDGV.CellContentClick += IncomeDGV_CellContentClick;
             // 
             // label9
             // 

@@ -46,7 +46,7 @@ namespace FinancialTracker
         }
 
 
-        SqlConnection Con = new SqlConnection(@"Data Source=TarunLaptop\SQLEXPRESS;Initial Catalog=FinanceDbv2;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Server=tcp:sqldatabasefinance.database.windows.net,1433;Initial Catalog=FinanceDB;Persist Security Info=False;User ID=test;Password=!abcd123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         private void Clear()
         {
             IncNameTb.Text = "";
@@ -128,6 +128,18 @@ namespace FinancialTracker
             Login Obj = new Login();
             Obj.Show();
             this.Hide();
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+            Incomes Obj = new Incomes();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void IncDescTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

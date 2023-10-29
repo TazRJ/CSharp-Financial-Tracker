@@ -160,6 +160,7 @@
             label5.TabIndex = 68;
             label5.Text = "Back";
             label5.TextAlign = ContentAlignment.BottomCenter;
+            label5.Click += label5_Click;
             // 
             // label6
             // 

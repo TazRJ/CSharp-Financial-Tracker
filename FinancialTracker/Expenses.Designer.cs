@@ -335,6 +335,7 @@
             ExpDescTb.Name = "ExpDescTb";
             ExpDescTb.Size = new Size(243, 164);
             ExpDescTb.TabIndex = 44;
+            ExpDescTb.TextChanged += ExpDescTb_TextChanged;
             // 
             // label12
             // 
