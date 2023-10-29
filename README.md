@@ -17,7 +17,7 @@ Modify connection strings on all pages to your personal connection string for yo
 
 ## Table
 
-**Here is the code for each table Expense, Income and User tables! Add these to the Tables folder in your database!**
+**Here is the code for each table Expense, Income and User tables! This has already been implemented into our Azure DB! Feel free to replicate this for you own use!**
 
 ~~~
  CREATE TABLE [dbo].[ExpenseTbl] (
