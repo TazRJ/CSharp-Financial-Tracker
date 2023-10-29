@@ -46,9 +46,11 @@ namespace FinancialTracker
             cmd.Parameters.AddWithValue("@Username", username);
             int count = (int)cmd.ExecuteScalar();
             Con.Close();
-
-            return count == 0; // If count is 0, the username is available; otherwise, it exists.
+            // If count is 0, the username is available; otherwise, it exists.
+            return count == 0; 
         }
+
+        //registers users
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             if (UnameTb.Text == "" || PhoneTb.Text == "" || PwdTb.Text == "" || AddressTb.Text == "")
@@ -94,7 +96,7 @@ namespace FinancialTracker
         {
 
         }
-
+        //close btn
         private void label5_Click(object sender, EventArgs e)
         {
             this.Close();

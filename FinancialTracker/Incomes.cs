@@ -54,6 +54,7 @@ namespace FinancialTracker
             IncDescTb.Text = "";
             CatCb.SelectedIndex = 0;
         }
+        //add income
         private void SubIncBtn_Click(object sender, EventArgs e)
         {
             if (IncNameTb.Text == "" || IncAmountTb.Text == "" || IncDescTb.Text == "" || CatCb.SelectedIndex == -1)
@@ -83,7 +84,7 @@ namespace FinancialTracker
                 }
             }
         }
-
+        //total income
         private void getTotalInc()
         {
             try
