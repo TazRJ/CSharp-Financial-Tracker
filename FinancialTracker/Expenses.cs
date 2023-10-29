@@ -131,5 +131,12 @@ namespace FinancialTracker
         {
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            ViewStocks Obj = new ViewStocks();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

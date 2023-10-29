@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            label10 = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -46,6 +47,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(label10);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label3);
@@ -59,6 +61,18 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(286, 1078);
             panel2.TabIndex = 28;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(54, 731);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(162, 38);
+            label10.TabIndex = 11;
+            label10.Text = "View Stocks";
+            label10.Click += label10_Click;
             // 
             // label1
             // 
@@ -76,7 +90,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(54, 655);
+            label2.Location = new Point(54, 649);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(197, 38);
@@ -218,5 +232,6 @@
         private Label label8;
         private DataGridView IncomeDGV;
         private Label label9;
+        private Label label10;
     }
 }

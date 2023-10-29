@@ -59,6 +59,7 @@
             label15 = new Label();
             SubIncBtn = new Button();
             label16 = new Label();
+            label10 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -187,6 +188,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(label37);
             panel1.Controls.Add(label38);
             panel1.Controls.Add(label39);
@@ -411,6 +413,18 @@
             label16.Text = "Close";
             label16.Click += label16_Click;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(54, 732);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(162, 38);
+            label10.TabIndex = 10;
+            label10.Text = "View Stocks";
+            label10.Click += label10_Click;
+            // 
             // Incomes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -484,5 +498,6 @@
         private Label label15;
         private Button SubIncBtn;
         private Label label16;
+        private Label label10;
     }
 }

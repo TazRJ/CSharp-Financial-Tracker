@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label3 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -92,6 +93,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
@@ -106,6 +108,18 @@
             panel1.Size = new Size(286, 1078);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(54, 731);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(162, 38);
+            label3.TabIndex = 8;
+            label3.Text = "View Stocks";
+            label3.Click += label3_Click;
             // 
             // label7
             // 
@@ -737,5 +751,6 @@
         private Label BestExpCatLbl;
         private Label label36;
         private Label CloseBtn;
+        private Label label3;
     }
 }
