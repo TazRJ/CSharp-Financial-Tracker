@@ -40,6 +40,7 @@
             label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
+            label10 = new Label();
             label37 = new Label();
             label38 = new Label();
             label39 = new Label();
@@ -59,7 +60,6 @@
             label15 = new Label();
             SubIncBtn = new Button();
             label16 = new Label();
-            label10 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -85,6 +85,7 @@
             TotalIncLbl.Size = new Size(22, 25);
             TotalIncLbl.TabIndex = 1;
             TotalIncLbl.Text = "0";
+            TotalIncLbl.Click += TotalIncLbl_Click;
             // 
             // label9
             // 
@@ -202,6 +203,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(286, 1078);
             panel1.TabIndex = 26;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(54, 732);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(162, 38);
+            label10.TabIndex = 10;
+            label10.Text = "View Stocks";
+            label10.Click += label10_Click;
             // 
             // label37
             // 
@@ -412,18 +425,6 @@
             label16.TabIndex = 37;
             label16.Text = "Close";
             label16.Click += label16_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(54, 732);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(162, 38);
-            label10.TabIndex = 10;
-            label10.Text = "View Stocks";
-            label10.Click += label10_Click;
             // 
             // Incomes
             // 

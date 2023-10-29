@@ -22,7 +22,7 @@ namespace FinancialTracker
         private void DisplayIncomes()
         {
             Con.Open();
-            string Query = "select * from ExpenseTbl";
+            string Query = "select * from ExpenseTbl where ExpUser='" + Login.User + "'";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -75,7 +75,9 @@ namespace FinancialTracker
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            ViewExpenses Obj = new ViewExpenses();
+            Obj.Show();
+            this.Hide();
         }
 
         private void label10_Click(object sender, EventArgs e)

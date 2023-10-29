@@ -34,7 +34,7 @@ namespace FinancialTracker
         private void DisplayIncomes()
         {
             Con.Open();
-            string Query = "select * from IncomeTbl";
+            string Query = "select * from IncomeTbl where IncUser='" + Login.User + "'";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();

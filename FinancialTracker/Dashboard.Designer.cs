@@ -523,6 +523,7 @@
             BalanceLbl.Size = new Size(22, 25);
             BalanceLbl.TabIndex = 5;
             BalanceLbl.Text = "0";
+            BalanceLbl.Click += BalanceLbl_Click;
             // 
             // label30
             // 
@@ -622,6 +623,7 @@
             BestExpCatLbl.Size = new Size(55, 25);
             BestExpCatLbl.TabIndex = 5;
             BestExpCatLbl.Text = "None";
+            BestExpCatLbl.Click += BestExpCatLbl_Click;
             // 
             // label36
             // 

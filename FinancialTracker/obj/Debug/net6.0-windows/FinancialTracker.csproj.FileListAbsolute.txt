@@ -124,3 +124,5 @@ C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\CSharp-Financial-Tracke
 C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\CSharp-Financial-Tracker-main\FinancialTracker\obj\Debug\net6.0-windows\FinancialTracker.pdb
 C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\CSharp-Financial-Tracker-main\FinancialTracker\obj\Debug\net6.0-windows\FinancialTracker.genruntimeconfig.cache
 C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\CSharp-Financial-Tracker-main\FinancialTracker\obj\Debug\net6.0-windows\ref\FinancialTracker.dll
+C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\FinancialTracker\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\tarun\OneDrive\Desktop\CSharp-Financial-Tracker\FinancialTracker\obj\Debug\net6.0-windows\FinancialTracker.ViewStocks.resources

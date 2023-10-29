@@ -31,13 +31,19 @@ namespace FinancialTracker
             PwdTb.Text = "";
             AddressTb.Text = "";
         }
+
+        private bool IsNumeric(string input)
+        {
+            int result;
+            return int.TryParse(input, out result);
+        }
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             if (UnameTb.Text == "" || PhoneTb.Text == "" || PwdTb.Text == "" || AddressTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
-            else
+            if (IsNumeric(PhoneTb.Text))
             {
                 try
                 {
@@ -57,6 +63,10 @@ namespace FinancialTracker
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Phone number must be a valid integer.");
             }
 
         }

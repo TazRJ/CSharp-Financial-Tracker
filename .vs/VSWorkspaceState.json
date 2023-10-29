@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FinancialTracker"
   ],
-  "SelectedNode": "\\FinancialTracker.sln",
+  "SelectedNode": "\\FinancialTracker\\ViewIncomes.cs",
   "PreviewInSolutionExplorer": false
 }

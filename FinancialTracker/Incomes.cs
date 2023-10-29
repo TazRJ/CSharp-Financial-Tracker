@@ -148,5 +148,10 @@ namespace FinancialTracker
             Obj.Show();
             this.Hide();
         }
+
+        private void TotalIncLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

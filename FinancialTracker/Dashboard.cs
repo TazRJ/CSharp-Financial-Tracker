@@ -297,11 +297,11 @@ namespace FinancialTracker
             try
             {
                 Con.Open();
-                String InnerQuery = "select Max(ExpAmount) from ExpenseTbl";
+                String InnerQuery = "select Max(ExpAmount) from ExpenseTbl where ExpUser = '" + Login.User + "'";
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter sda1 = new SqlDataAdapter(InnerQuery, Con);
                 sda1.Fill(dt1);
-                string Query = "select ExpCat from ExpenseTbl where ExpAmount = '" + dt1.Rows[0][0].ToString() + "'";
+                string Query = "select ExpCat from ExpenseTbl where ExpAmount = '" + dt1.Rows[0][0].ToString() + "' and ExpUser = '" + Login.User + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -320,11 +320,11 @@ namespace FinancialTracker
             try
             {
                 Con.Open();
-                String InnerQuery = "select Max(IncAmount) from IncomeTbl";
+                String InnerQuery = "select Max(IncAmount) from IncomeTbl where IncUser='" + Login.User + "'";
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter sda1 = new SqlDataAdapter(InnerQuery, Con);
                 sda1.Fill(dt1);
-                string Query = "select IncCat from IncomeTbl where IncAmount = '" + dt1.Rows[0][0].ToString() + "'";
+                string Query = "select IncCat from IncomeTbl where IncAmount = '" + dt1.Rows[0][0].ToString() + "' and IncUser='" + Login.User + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -355,6 +355,16 @@ namespace FinancialTracker
             ViewStocks Obj = new ViewStocks();
             Obj.Show();
             this.Hide();
+
+        }
+
+        private void BalanceLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BestExpCatLbl_Click(object sender, EventArgs e)
+        {
 
         }
     }
