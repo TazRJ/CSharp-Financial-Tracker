@@ -5,7 +5,9 @@
 **Server: sqldatabasefinance.database.windows.net**
 
 **User Name: test**
+
 **Password: !abcd123**
+
 **Connection String: Server=tcp:sqldatabasefinance.database.windows.net,1433;Initial Catalog=FinanceDB;Persist Security Info=False;User ID=test;Password=!abcd123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
 **Database Name: FinanceDB**
 
