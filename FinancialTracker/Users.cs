@@ -37,6 +37,18 @@ namespace FinancialTracker
             int result;
             return int.TryParse(input, out result);
         }
+
+        private bool IsUsernameAvailable(string username)
+        {
+            // Perform a check in the database to see if the username exists
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM UserTbl WHERE UName = @Username", Con);
+            cmd.Parameters.AddWithValue("@Username", username);
+            int count = (int)cmd.ExecuteScalar();
+            Con.Close();
+
+            return count == 0; // If count is 0, the username is available; otherwise, it exists.
+        }
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             if (UnameTb.Text == "" || PhoneTb.Text == "" || PwdTb.Text == "" || AddressTb.Text == "")
@@ -45,23 +57,30 @@ namespace FinancialTracker
             }
             if (IsNumeric(PhoneTb.Text))
             {
-                try
+                if (IsUsernameAvailable(UnameTb.Text))
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into UserTbl(UName,UDob,UPhone,UPass,UAddress)values(@UN,@UD,@UP,@UPA,@UA)", Con);
-                    cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
-                    cmd.Parameters.AddWithValue("@UD", DOB.Value.Date);
-                    cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
-                    cmd.Parameters.AddWithValue("@UPA", PwdTb.Text);
-                    cmd.Parameters.AddWithValue("@UA", AddressTb.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("User Added!");
-                    Con.Close();
-                    Clear();
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("insert into UserTbl(UName,UDob,UPhone,UPass,UAddress)values(@UN,@UD,@UP,@UPA,@UA)", Con);
+                        cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
+                        cmd.Parameters.AddWithValue("@UD", DOB.Value.Date);
+                        cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
+                        cmd.Parameters.AddWithValue("@UPA", PwdTb.Text);
+                        cmd.Parameters.AddWithValue("@UA", AddressTb.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("User Added!");
+                        Con.Close();
+                        Clear();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Username already exists!");
                 }
             }
             else
