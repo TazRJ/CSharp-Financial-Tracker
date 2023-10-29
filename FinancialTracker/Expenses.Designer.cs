@@ -44,21 +44,22 @@
             label41 = new Label();
             label42 = new Label();
             label43 = new Label();
-            button1 = new Button();
+            AddExpBtn = new Button();
             label15 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            ExpDate = new DateTimePicker();
             label14 = new Label();
-            comboBox1 = new ComboBox();
+            ExpCatCb = new ComboBox();
             label13 = new Label();
-            textBox3 = new TextBox();
+            ExpDescTb = new TextBox();
             label12 = new Label();
-            textBox2 = new TextBox();
+            ExpAmtTb = new TextBox();
             label11 = new Label();
-            textBox1 = new TextBox();
+            ExpNameTb = new TextBox();
             panel3 = new Panel();
-            label10 = new Label();
+            TotalExpLbl = new Label();
             label9 = new Label();
             label8 = new Label();
+            CloseBtn = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -109,6 +110,7 @@
             label1.Size = new Size(103, 38);
             label1.TabIndex = 7;
             label1.Text = "Logout";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -120,6 +122,7 @@
             label2.Size = new Size(197, 38);
             label2.TabIndex = 6;
             label2.Text = "View Expenses";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -131,6 +134,7 @@
             label3.Size = new Size(175, 38);
             label3.TabIndex = 5;
             label3.Text = "View Income";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -143,6 +147,7 @@
             label4.Size = new Size(130, 38);
             label4.TabIndex = 4;
             label4.Text = "Expenses";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -155,6 +160,7 @@
             label5.Size = new Size(108, 38);
             label5.TabIndex = 3;
             label5.Text = "Income";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -166,6 +172,7 @@
             label6.Size = new Size(151, 38);
             label6.TabIndex = 2;
             label6.Text = "Dashboard";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -256,16 +263,17 @@
             label43.TabIndex = 1;
             label43.Text = "Project Name";
             // 
-            // button1
+            // AddExpBtn
             // 
-            button1.ForeColor = Color.Green;
-            button1.Location = new Point(1140, 845);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 88);
-            button1.TabIndex = 49;
-            button1.Text = "Submit";
-            button1.UseVisualStyleBackColor = true;
+            AddExpBtn.ForeColor = Color.Green;
+            AddExpBtn.Location = new Point(1140, 845);
+            AddExpBtn.Margin = new Padding(4, 5, 4, 5);
+            AddExpBtn.Name = "AddExpBtn";
+            AddExpBtn.Size = new Size(171, 88);
+            AddExpBtn.TabIndex = 49;
+            AddExpBtn.Text = "Submit";
+            AddExpBtn.UseVisualStyleBackColor = true;
+            AddExpBtn.Click += AddExpBtn_Click;
             // 
             // label15
             // 
@@ -278,13 +286,13 @@
             label15.TabIndex = 48;
             label15.Text = "Date";
             // 
-            // dateTimePicker1
+            // ExpDate
             // 
-            dateTimePicker1.Location = new Point(1287, 397);
-            dateTimePicker1.Margin = new Padding(4, 5, 4, 5);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(284, 31);
-            dateTimePicker1.TabIndex = 47;
+            ExpDate.Location = new Point(1287, 397);
+            ExpDate.Margin = new Padding(4, 5, 4, 5);
+            ExpDate.Name = "ExpDate";
+            ExpDate.Size = new Size(296, 31);
+            ExpDate.TabIndex = 47;
             // 
             // label14
             // 
@@ -297,14 +305,16 @@
             label14.TabIndex = 46;
             label14.Text = "Categories";
             // 
-            // comboBox1
+            // ExpCatCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(1287, 272);
-            comboBox1.Margin = new Padding(4, 5, 4, 5);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(258, 33);
-            comboBox1.TabIndex = 45;
+            ExpCatCb.FormattingEnabled = true;
+            ExpCatCb.Items.AddRange(new object[] { "Food", "Shopping", "Medical", "Household", "Travel", "Vehicle", "Other" });
+            ExpCatCb.Location = new Point(1287, 272);
+            ExpCatCb.Margin = new Padding(4, 5, 4, 5);
+            ExpCatCb.Name = "ExpCatCb";
+            ExpCatCb.Size = new Size(296, 33);
+            ExpCatCb.TabIndex = 45;
+            ExpCatCb.Text = "Select Category";
             // 
             // label13
             // 
@@ -317,14 +327,14 @@
             label13.TabIndex = 43;
             label13.Text = "Description";
             // 
-            // textBox3
+            // ExpDescTb
             // 
-            textBox3.Location = new Point(890, 525);
-            textBox3.Margin = new Padding(4, 5, 4, 5);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(243, 164);
-            textBox3.TabIndex = 44;
+            ExpDescTb.Location = new Point(890, 525);
+            ExpDescTb.Margin = new Padding(4, 5, 4, 5);
+            ExpDescTb.Multiline = true;
+            ExpDescTb.Name = "ExpDescTb";
+            ExpDescTb.Size = new Size(243, 164);
+            ExpDescTb.TabIndex = 44;
             // 
             // label12
             // 
@@ -337,13 +347,13 @@
             label12.TabIndex = 41;
             label12.Text = "Amount";
             // 
-            // textBox2
+            // ExpAmtTb
             // 
-            textBox2.Location = new Point(890, 397);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(231, 31);
-            textBox2.TabIndex = 42;
+            ExpAmtTb.Location = new Point(890, 397);
+            ExpAmtTb.Margin = new Padding(4, 5, 4, 5);
+            ExpAmtTb.Name = "ExpAmtTb";
+            ExpAmtTb.Size = new Size(231, 31);
+            ExpAmtTb.TabIndex = 42;
             // 
             // label11
             // 
@@ -356,19 +366,19 @@
             label11.TabIndex = 37;
             label11.Text = "Expense Name";
             // 
-            // textBox1
+            // ExpNameTb
             // 
-            textBox1.Location = new Point(890, 272);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 31);
-            textBox1.TabIndex = 40;
-            textBox1.TextChanged += textBox1_TextChanged;
+            ExpNameTb.Location = new Point(890, 272);
+            ExpNameTb.Margin = new Padding(4, 5, 4, 5);
+            ExpNameTb.Name = "ExpNameTb";
+            ExpNameTb.Size = new Size(231, 31);
+            ExpNameTb.TabIndex = 40;
+            ExpNameTb.TextChanged += textBox1_TextChanged;
             // 
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label10);
+            panel3.Controls.Add(TotalExpLbl);
             panel3.Controls.Add(label9);
             panel3.Location = new Point(429, 350);
             panel3.Margin = new Padding(4, 5, 4, 5);
@@ -376,16 +386,16 @@
             panel3.Size = new Size(286, 155);
             panel3.TabIndex = 39;
             // 
-            // label10
+            // TotalExpLbl
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(131, 85);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(49, 25);
-            label10.TabIndex = 1;
-            label10.Text = "AUD";
+            TotalExpLbl.AutoSize = true;
+            TotalExpLbl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TotalExpLbl.Location = new Point(131, 85);
+            TotalExpLbl.Margin = new Padding(4, 0, 4, 0);
+            TotalExpLbl.Name = "TotalExpLbl";
+            TotalExpLbl.Size = new Size(22, 25);
+            TotalExpLbl.TabIndex = 1;
+            TotalExpLbl.Text = "0";
             // 
             // label9
             // 
@@ -409,22 +419,35 @@
             label8.TabIndex = 38;
             label8.Text = "Personal Expenses";
             // 
+            // CloseBtn
+            // 
+            CloseBtn.AutoSize = true;
+            CloseBtn.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            CloseBtn.Location = new Point(2024, 9);
+            CloseBtn.Margin = new Padding(4, 0, 4, 0);
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.Size = new Size(84, 38);
+            CloseBtn.TabIndex = 50;
+            CloseBtn.Text = "Close";
+            CloseBtn.Click += CloseBtn_Click;
+            // 
             // Expenses
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2121, 1078);
-            Controls.Add(button1);
+            Controls.Add(CloseBtn);
+            Controls.Add(AddExpBtn);
             Controls.Add(label15);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(ExpDate);
             Controls.Add(label14);
-            Controls.Add(comboBox1);
+            Controls.Add(ExpCatCb);
             Controls.Add(label13);
-            Controls.Add(textBox3);
+            Controls.Add(ExpDescTb);
             Controls.Add(label12);
-            Controls.Add(textBox2);
+            Controls.Add(ExpAmtTb);
             Controls.Add(label11);
-            Controls.Add(textBox1);
+            Controls.Add(ExpNameTb);
             Controls.Add(panel3);
             Controls.Add(label8);
             Controls.Add(panel1);
@@ -461,20 +484,21 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Button button1;
+        private Button AddExpBtn;
         private Label label15;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker ExpDate;
         private Label label14;
-        private ComboBox comboBox1;
+        private ComboBox ExpCatCb;
         private Label label13;
-        private TextBox textBox3;
+        private TextBox ExpDescTb;
         private Label label12;
-        private TextBox textBox2;
+        private TextBox ExpAmtTb;
         private Label label11;
-        private TextBox textBox1;
+        private TextBox ExpNameTb;
         private Panel panel3;
-        private Label label10;
+        private Label TotalExpLbl;
         private Label label9;
         private Label label8;
+        private Label CloseBtn;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
-            label10 = new Label();
+            TotalIncLbl = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -66,7 +66,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(label10);
+            panel2.Controls.Add(TotalIncLbl);
             panel2.Controls.Add(label9);
             panel2.Location = new Point(407, 350);
             panel2.Margin = new Padding(4, 5, 4, 5);
@@ -74,16 +74,16 @@
             panel2.Size = new Size(286, 155);
             panel2.TabIndex = 15;
             // 
-            // label10
+            // TotalIncLbl
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(131, 85);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(49, 25);
-            label10.TabIndex = 1;
-            label10.Text = "AUD";
+            TotalIncLbl.AutoSize = true;
+            TotalIncLbl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TotalIncLbl.Location = new Point(131, 85);
+            TotalIncLbl.Margin = new Padding(4, 0, 4, 0);
+            TotalIncLbl.Name = "TotalIncLbl";
+            TotalIncLbl.Size = new Size(22, 25);
+            TotalIncLbl.TabIndex = 1;
+            TotalIncLbl.Text = "0";
             // 
             // label9
             // 
@@ -211,6 +211,7 @@
             label37.Size = new Size(103, 38);
             label37.TabIndex = 7;
             label37.Text = "Logout";
+            label37.Click += label37_Click;
             // 
             // label38
             // 
@@ -222,6 +223,7 @@
             label38.Size = new Size(197, 38);
             label38.TabIndex = 6;
             label38.Text = "View Expenses";
+            label38.Click += label38_Click;
             // 
             // label39
             // 
@@ -245,6 +247,7 @@
             label40.Size = new Size(130, 38);
             label40.TabIndex = 4;
             label40.Text = "Expenses";
+            label40.Click += label40_Click;
             // 
             // label41
             // 
@@ -348,8 +351,9 @@
             CatCb.Location = new Point(1266, 272);
             CatCb.Margin = new Padding(4, 5, 4, 5);
             CatCb.Name = "CatCb";
-            CatCb.Size = new Size(258, 33);
+            CatCb.Size = new Size(304, 33);
             CatCb.TabIndex = 32;
+            CatCb.Text = "Select Category";
             // 
             // label14
             // 
@@ -367,7 +371,7 @@
             IncomeDate.Location = new Point(1266, 397);
             IncomeDate.Margin = new Padding(4, 5, 4, 5);
             IncomeDate.Name = "IncomeDate";
-            IncomeDate.Size = new Size(284, 31);
+            IncomeDate.Size = new Size(304, 31);
             IncomeDate.TabIndex = 34;
             // 
             // label15
@@ -448,7 +452,7 @@
 
         #endregion
         private Panel panel2;
-        private Label label10;
+        private Label TotalIncLbl;
         private Label label9;
         private Label label8;
         private Label label7;

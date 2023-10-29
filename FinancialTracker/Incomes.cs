@@ -16,6 +16,7 @@ namespace FinancialTracker
         public Incomes()
         {
             InitializeComponent();
+            getTotalInc();
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -83,9 +84,48 @@ namespace FinancialTracker
             }
         }
 
+        private void getTotalInc()
+        {
+            try
+            {
+                Con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select Sum(IncAmount) from IncomeTbl where IncUser='" + Login.User + "'", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                TotalIncLbl.Text = "$ " + dt.Rows[0][0].ToString();
+                Con.Close();
+            }
+            catch (Exception)
+            {
+                Con.Close();
+            }
+
+        }
+
         private void label39_Click(object sender, EventArgs e)
         {
             ViewIncomes Obj = new ViewIncomes();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            Expenses Obj = new Expenses();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+            ViewExpenses Obj = new ViewExpenses();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
             Obj.Show();
             this.Hide();
         }

@@ -36,10 +36,6 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            label14 = new Label();
-            comboBox1 = new ComboBox();
-            label11 = new Label();
-            textBox1 = new TextBox();
             label8 = new Label();
             IncomeDGV = new DataGridView();
             label9 = new Label();
@@ -74,6 +70,7 @@
             label1.Size = new Size(103, 38);
             label1.TabIndex = 7;
             label1.Text = "Logout";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -85,6 +82,7 @@
             label2.Size = new Size(197, 38);
             label2.TabIndex = 6;
             label2.Text = "View Expenses";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -97,6 +95,7 @@
             label3.Size = new Size(175, 38);
             label3.TabIndex = 5;
             label3.Text = "View Income";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -109,6 +108,7 @@
             label4.Size = new Size(130, 38);
             label4.TabIndex = 4;
             label4.Text = "Expenses";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -121,6 +121,7 @@
             label5.Size = new Size(108, 38);
             label5.TabIndex = 3;
             label5.Text = "Income";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -145,46 +146,6 @@
             label7.TabIndex = 1;
             label7.Text = "Project Name";
             // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(819, 220);
-            label14.Margin = new Padding(4, 0, 4, 0);
-            label14.Name = "label14";
-            label14.Size = new Size(127, 32);
-            label14.TabIndex = 46;
-            label14.Text = "Categories";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(961, 217);
-            comboBox1.Margin = new Padding(4, 5, 4, 5);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(258, 33);
-            comboBox1.TabIndex = 45;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(340, 213);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(164, 32);
-            label11.TabIndex = 37;
-            label11.Text = "Income Name";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(501, 217);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 31);
-            textBox1.TabIndex = 40;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -199,13 +160,13 @@
             // IncomeDGV
             // 
             IncomeDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            IncomeDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            IncomeDGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             IncomeDGV.BackgroundColor = Color.White;
             IncomeDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             IncomeDGV.Location = new Point(326, 290);
             IncomeDGV.Margin = new Padding(4, 5, 4, 5);
             IncomeDGV.Name = "IncomeDGV";
-            IncomeDGV.RowHeadersWidth = 62;
+            IncomeDGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             IncomeDGV.RowTemplate.Height = 25;
             IncomeDGV.Size = new Size(1741, 768);
             IncomeDGV.TabIndex = 47;
@@ -229,10 +190,6 @@
             ClientSize = new Size(2121, 1078);
             Controls.Add(label9);
             Controls.Add(IncomeDGV);
-            Controls.Add(label14);
-            Controls.Add(comboBox1);
-            Controls.Add(label11);
-            Controls.Add(textBox1);
             Controls.Add(label8);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
@@ -257,10 +214,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Label label14;
-        private ComboBox comboBox1;
-        private Label label11;
-        private TextBox textBox1;
         private Label label8;
         private DataGridView IncomeDGV;
         private Label label9;

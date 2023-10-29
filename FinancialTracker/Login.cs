@@ -25,13 +25,15 @@ namespace FinancialTracker
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=TarunLaptop\SQLEXPRESS;Initial Catalog=FinanceDbv2;Integrated Security=True");
+
         public static string User;
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (UnameTb.Text == "" || PwdTb.Text == "") 
+            if (UnameTb.Text == "" || PwdTb.Text == "")
             {
                 MessageBox.Show("Enter Both Username and Password");
-            } else
+            }
+            else
             {
                 Con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("select count(*) from UserTbl where UName = '" + UnameTb.Text + "' and UPass='" + PwdTb.Text + "'", Con);
@@ -53,6 +55,11 @@ namespace FinancialTracker
                 }
                 Con.Close();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

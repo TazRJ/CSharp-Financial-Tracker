@@ -65,6 +65,7 @@
             PwdTb.Location = new Point(106, 448);
             PwdTb.Margin = new Padding(4, 5, 4, 5);
             PwdTb.Name = "PwdTb";
+            PwdTb.PasswordChar = '*';
             PwdTb.Size = new Size(231, 31);
             PwdTb.TabIndex = 52;
             // 
@@ -109,6 +110,7 @@
             label2.Size = new Size(72, 32);
             label2.TabIndex = 56;
             label2.Text = "Close";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
