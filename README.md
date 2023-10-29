@@ -1,6 +1,6 @@
 # CSharp-Financial-Tracker
 
-##Server/Database/Connection String:
+## Server/Database/Connection String:
 
 Modify connection strings on all pages to your personal connection string for the server! It should be displayed on the properties tab when you select the server in server explorer:
 
@@ -8,9 +8,9 @@ Modify connection strings on all pages to your personal connection string for th
 <img width="246" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/8cf21050-a7ec-41cd-9d01-338d71c3ee5d">
 
 
-##Table
+## Table
 
-**Here is the code for the Expense, Income and User tables:
+** Here is the code for the Expense, Income and User tables: **
 
 ~~~
  CREATE TABLE [dbo].[ExpenseTbl] (
