@@ -2,19 +2,15 @@
 
 ## Server/Database/Connection String:
 
-**1. Install Sql Server Express**
-**2. Open SQL Server Management Studio and connect default sql server**
-<img width="957" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/27c27eea-7a68-48c5-a5b7-da7ebe1ca9a5">
-
-**Connect to the server from VSStudio: Open Server Explorer, and click on add data connection. Select Microsoft SQL Server**
-<img width="957" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/5801ce2a-6335-4d2c-bb6a-750dd2277045">
+**Server: sqldatabasefinance.database.windows.net**
+**User Name: test**
+**Password: !abcd123**
+**Connection String: Server=tcp:sqldatabasefinance.database.windows.net,1433;Initial Catalog=FinanceDB;Persist Security Info=False;User ID=test;Password=!abcd123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;**
+**Database Name: FinanceDB**
 
 Modify connection strings on all pages to your personal connection string for your server! It should be displayed on the properties tab when you click on your server in the server explorer:
 
-<img width="166" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/1bdfe497-d464-4569-a60d-e14c2b851ad5">
-
-<img width="246" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/8cf21050-a7ec-41cd-9d01-338d71c3ee5d">
-
+<img width="136" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/dd1e48c9-1ba5-4a64-aaf4-30c8df9529a4">
 
 ## Table
 
