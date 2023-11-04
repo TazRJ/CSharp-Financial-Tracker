@@ -4,8 +4,6 @@
 
 Modify connection strings on all pages to your personal connection string for your server! It should be displayed on the properties tab when you click on your server in the server explorer:
 
-<img width="136" alt="image" src="https://github.com/TazRJ/CSharp-Financial-Tracker/assets/99307581/dd1e48c9-1ba5-4a64-aaf4-30c8df9529a4">
-
 ## Table
 
 **Here is the code for each table Expense, Income and User tables! This has already been implemented into our Azure DB! Feel free to replicate this for you own use!**
