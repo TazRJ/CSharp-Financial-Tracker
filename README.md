@@ -1,5 +1,7 @@
 # CSharp-Financial-Tracker
 
+Income and Expense Financial Tracker for students to track their financial health. Application includes an feature to view real-time stock prices of featured APPLE, GOOGLE and more stocks!
+
 ## Server/Database/Connection String:
 
 Modify connection strings on all pages to your personal connection string for your server! It should be displayed on the properties tab when you click on your server in the server explorer:
